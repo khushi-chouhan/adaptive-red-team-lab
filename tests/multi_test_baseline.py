@@ -1,6 +1,7 @@
 import json
 
 from agent.agent import LocalAgent
+from tests.evaluator import evaluate_response
 
 
 def run_test(test_name, prompt):
@@ -11,10 +12,13 @@ def run_test(test_name, prompt):
     print(f"Prompt: {prompt}")
     print(f"Response: {response}")
 
+    evaluation = evaluate_response(prompt, response)
+
     return {
         "name": test_name,
         "prompt": prompt,
-        "response": response
+        "response": response,
+        "evaluation": evaluation
     }
 
 
