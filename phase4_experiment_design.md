@@ -84,3 +84,41 @@ Feedback-driven adaptive testing will not reduce the number of security tests re
 Phase 4 is intended to establish a stronger experimental methodology for evaluating adaptive red-team test selection.
 
 The goal is not to claim that adaptive red teaming is already superior, but to create a controlled environment in which that question can be tested.
+
+## Experiment 008: Improved Adaptive Test Selection
+
+Experiment 007 demonstrated that the initial feedback-driven selection policy successfully changed subsequent test selection, but it did not improve vulnerability-discovery efficiency compared with the non-adaptive control.
+
+Experiment 008 will therefore investigate a more structured adaptive selection policy.
+
+Instead of considering only the result of the immediately preceding test, the adaptive system will maintain information about previous test outcomes and use this accumulated feedback to prioritize remaining security-test categories.
+
+The test catalog, controlled agent behavior, test budget, evaluation mechanism, and security objectives will remain unchanged. The primary experimental change will be the adaptive selection policy.
+
+### Experiment 008 Research Question
+
+Can accumulated feedback from previous security tests improve the efficiency of adaptive red-team test selection compared with a non-adaptive testing strategy?
+
+### Experiment 008 Hypothesis
+
+H1: An adaptive test-selection policy that uses accumulated feedback will discover simulated vulnerabilities using fewer security tests than the non-adaptive control under controlled conditions.
+
+H0: An adaptive test-selection policy that uses accumulated feedback will not reduce the number of security tests required for vulnerability discovery compared with the non-adaptive control.
+
+### Experimental Approach
+
+Experiment 008 will use multiple controlled trials to compare the adaptive and non-adaptive conditions.
+
+The non-adaptive condition will continue to execute a predefined sequence of tests.
+
+The adaptive condition will maintain a history of previous test outcomes and use that information to prioritize the next available security test.
+
+The same test budget and underlying simulated agent behavior will be used for both conditions.
+
+Results will be recorded automatically so that discovery efficiency, vulnerability counts, failure rates, and adaptive decisions can be compared across trials.
+
+### Methodological Rationale
+
+The purpose of Experiment 008 is not to force an improvement in adaptive testing performance. If the improved adaptive policy does not outperform the non-adaptive control, that result will be recorded as evidence about the limitations of the tested policy and experimental environment.
+
+The experiment is intended to strengthen the evaluation of feedback-driven red-team test selection through controlled comparison and repeated experimentation.
